@@ -1,0 +1,310 @@
+/* Cinema Kalalayam™ - Training Studio & Live HUD Styles */
+
+.studio-wrapper {
+  min-height: calc(100vh - 100px);
+  background-color: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Studio Header */
+.studio-nav-bar {
+  background-color: var(--charcoal-surface);
+  border-bottom: 2px solid var(--cinema-yellow);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.studio-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.studio-title-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.studio-course-title {
+  font-size: 1.8rem;
+  color: var(--cinema-yellow);
+  line-height: 1;
+}
+
+.studio-course-code {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.studio-level-badge {
+  background-color: var(--cinema-yellow);
+  color: var(--charcoal-black);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  padding: 4px 14px;
+  border-radius: 4px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Studio Workspace Split Grid */
+.studio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  flex: 1;
+  gap: 2px;
+  background-color: #262626;
+}
+
+/* Left Panel: Master's Demonstration */
+.master-panel {
+  background-color: #141414;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--charcoal-border);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.panel-title {
+  font-size: 1.5rem;
+  color: var(--warm-white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.master-stage-box {
+  flex: 1;
+  background: radial-gradient(circle at 50% 30%, rgba(245, 197, 24, 0.12) 0%, #111111 80%);
+  border: 1px solid rgba(245, 197, 24, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.master-advice-bubble {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  right: 20px;
+  background: rgba(21, 21, 21, 0.88);
+  border: 1px solid var(--cinema-yellow);
+  border-radius: 6px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.master-quote {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--warm-white);
+}
+
+.master-controls {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Right Panel: Your Turn / Live Camera Feed */
+.performer-panel {
+  background-color: #121212;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.camera-stage-box {
+  flex: 1;
+  position: relative;
+  background-color: #050505;
+  border: 2px solid var(--charcoal-border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera-stage-box.recording {
+  border-color: var(--cinema-red);
+  box-shadow: 0 0 25px var(--red-glow);
+}
+
+#camera-video {
+  display: none; /* Video feeds directly to canvas */
+}
+
+#camera-canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Clapperboard Countdown Overlay */
+.countdown-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  backdrop-filter: blur(4px);
+}
+
+.countdown-number {
+  font-family: var(--font-display);
+  font-size: 8rem;
+  color: var(--cinema-yellow);
+  text-shadow: 0 0 40px var(--gold-glow);
+  animation: popIn 0.8s ease-out;
+}
+
+.countdown-label {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  letter-spacing: 4px;
+  color: var(--warm-white);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.4); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Live Cinematic Floating Metrics HUD */
+.live-metrics-hud {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 40;
+}
+
+.metric-chip {
+  background: rgba(21, 21, 21, 0.85);
+  border: 1px solid var(--charcoal-border);
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  font-family: monospace;
+  font-size: 0.82rem;
+}
+
+.metric-chip .label {
+  color: var(--text-muted);
+}
+
+.metric-chip .value {
+  color: var(--cinema-yellow);
+  font-weight: 700;
+}
+
+/* Cinematic Energy & Mass Bars at Bottom of Camera */
+.bottom-meters-box {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  z-index: 40;
+  background: rgba(21, 21, 21, 0.88);
+  border: 1px solid rgba(245, 197, 24, 0.25);
+  border-radius: 6px;
+  padding: 12px 18px;
+}
+
+.meter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meter-label-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.meter-bar-track {
+  height: 10px;
+  background: #222;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.meter-bar-fill {
+  height: 100%;
+  background: var(--cinema-yellow);
+  transition: width 0.2s ease-out;
+}
+
+.meter-bar-fill.mass-fill {
+  background: linear-gradient(90deg, #F5C518, #ff3d00);
+  box-shadow: 0 0 10px rgba(255, 61, 0, 0.6);
+}
+
+/* Camera Action Controls */
+.performer-controls {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.source-toggle-btn {
+  font-size: 0.82rem;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--charcoal-border);
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.source-toggle-btn:hover {
+  color: var(--cinema-yellow);
+  border-color: var(--cinema-yellow);
+}

@@ -1,0 +1,244 @@
+/* Cinema Kalalayam™ - Dramatic Result Screen & Judgement Day Styles */
+
+.result-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+}
+
+.result-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Blackout Dramatic Stinger Flash */
+.result-blackout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 1001;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.6s var(--ease-cinematic);
+}
+
+.result-blackout.faded {
+  opacity: 0;
+}
+
+/* Judgement Card */
+.result-content-card {
+  position: relative;
+  background-color: #1a1a1a;
+  border: 2px solid var(--cinema-yellow);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 880px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px var(--gold-glow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-top-banner {
+  background-color: #0d0d0d;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid var(--cinema-yellow);
+}
+
+.result-dramatic-tag {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  color: var(--cinema-red);
+}
+
+.result-main-title {
+  font-family: var(--font-display);
+  font-size: 3.4rem;
+  color: var(--cinema-yellow);
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+/* Body Split: Left Score & Breakdown, Right Reactive Mentor & AI Verdict */
+.result-body-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  padding: 28px;
+}
+
+/* Score Showcase */
+.score-circle-box {
+  background: radial-gradient(circle at 50% 50%, rgba(245, 197, 24, 0.15) 0%, rgba(0, 0, 0, 0.4) 80%);
+  border: 1px solid var(--charcoal-border);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.score-main-number {
+  font-family: var(--font-display);
+  font-size: 5.5rem;
+  color: var(--cinema-yellow);
+  line-height: 0.9;
+  text-shadow: 0 0 25px var(--gold-glow);
+}
+
+.score-category-label {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: var(--warm-white);
+  margin-top: 6px;
+}
+
+/* Performance Breakdown Bars */
+.breakdown-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.breakdown-title {
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 1px solid var(--charcoal-border);
+  padding-bottom: 6px;
+}
+
+.breakdown-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.breakdown-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.breakdown-meta .stat-name {
+  color: var(--warm-white);
+}
+
+.breakdown-meta .stat-val {
+  color: var(--cinema-yellow);
+  font-family: monospace;
+}
+
+.breakdown-bar-bg {
+  height: 8px;
+  background-color: #2b2b2b;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.breakdown-bar-fill {
+  height: 100%;
+  background-color: var(--cinema-yellow);
+  border-radius: 4px;
+  transition: width 1s var(--ease-cinematic);
+}
+
+/* Right: Mentor Reaction & Verdict Card */
+.mentor-reaction-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-mentor-stage {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  border: 1px solid rgba(245, 197, 24, 0.2);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+/* PRD Section 18: Yellow AI Feedback Card */
+.ai-verdict-card {
+  background-color: var(--cinema-yellow);
+  color: var(--charcoal-black);
+  border-radius: 8px;
+  padding: 20px;
+  border: 2px solid #e0b010;
+  box-shadow: 0 8px 24px rgba(245, 197, 24, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.verdict-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  border-bottom: 1.5px solid rgba(21, 21, 21, 0.2);
+  padding-bottom: 6px;
+}
+
+.verdict-quote {
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.verdict-translation {
+  font-size: 0.85rem;
+  color: #333333;
+  line-height: 1.35;
+  border-top: 1px dashed rgba(21, 21, 21, 0.2);
+  padding-top: 6px;
+}
+
+.verdict-author {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  text-align: right;
+  margin-top: 4px;
+}
+
+/* Result Actions Bottom Bar */
+.result-bottom-actions {
+  background-color: #121212;
+  padding: 18px 28px;
+  border-top: 1px solid var(--charcoal-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}

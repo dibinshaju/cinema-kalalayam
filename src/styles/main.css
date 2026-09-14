@@ -1,0 +1,348 @@
+/* Cinema Kalalayam™ - Core Design System & Tokens */
+/* "Serious UI. Ridiculous Purpose." */
+
+:root {
+  /* PRD Exact Color Tokens */
+  --cinema-yellow: #F5C518;      /* Primary Brand / Accent (25%) */
+  --charcoal-black: #151515;     /* Dark Theatre Background (60%) */
+  --warm-white: #FFF8E7;         /* Warm Off-White / Paper (60%) */
+  --cinema-red: #D92D20;         /* Cinematic Red Accent / Retake (5%) */
+  --dark-brown: #3A2A16;         /* Secondary Dark / Borders / Poster details */
+  --soft-yellow: #FFE58A;        /* Soft Yellow / Hover / Progress bg (10%) */
+  
+  /* Additional Functional Tokens */
+  --charcoal-surface: #1E1E1E;
+  --charcoal-card: #242424;
+  --charcoal-border: #333333;
+  --text-muted: #9E9E9E;
+  --text-light: #FFF8E7;
+  --text-dark: #151515;
+  --gold-glow: rgba(245, 197, 24, 0.35);
+  --red-glow: rgba(217, 45, 32, 0.4);
+
+  /* Typography Hierarchy Tokens */
+  --font-display: 'Bebas Neue', 'Oswald', sans-serif;
+  --font-condensed: 'Oswald', 'Bebas Neue', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-malayalam: 'Noto Sans Malayalam', sans-serif;
+
+  /* Transitions */
+  --ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--charcoal-black);
+  color: var(--text-light);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--charcoal-black);
+  color: var(--text-light);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Defaults & Poster Helpers */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.font-condensed {
+  font-family: var(--font-condensed);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-malayalam {
+  font-family: var(--font-malayalam);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.2px;
+}
+
+/* Global Film-Strip Frame Header */
+.film-strip-header {
+  height: 16px;
+  background-color: #0d0d0d;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #0d0d0d 0px,
+    #0d0d0d 14px,
+    #2c2c2c 14px,
+    #2c2c2c 26px
+  );
+  border-bottom: 2px solid var(--cinema-yellow);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  transition: all 0.2s var(--ease-cinematic);
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: var(--cinema-yellow);
+  color: var(--charcoal-black);
+  border-color: var(--cinema-yellow);
+  font-weight: 800;
+  box-shadow: 0 4px 14px var(--gold-glow);
+}
+
+.btn-primary:hover {
+  background-color: #ffd633;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 197, 24, 0.55);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--cinema-yellow);
+  border-color: var(--cinema-yellow);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(245, 197, 24, 0.12);
+  transform: translateY(-2px);
+}
+
+.btn-retake {
+  background-color: var(--cinema-red);
+  color: #ffffff;
+  border-color: var(--cinema-red);
+  box-shadow: 0 4px 14px var(--red-glow);
+}
+
+.btn-retake:hover {
+  background-color: #b71c1c;
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 1rem;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.badge-yellow {
+  background-color: rgba(245, 197, 24, 0.15);
+  color: var(--cinema-yellow);
+  border: 1px solid var(--cinema-yellow);
+}
+
+.badge-red {
+  background-color: rgba(217, 45, 32, 0.15);
+  color: var(--cinema-red);
+  border: 1px solid var(--cinema-red);
+}
+
+.badge-green {
+  background-color: rgba(40, 167, 69, 0.15);
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+/* Container */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Section Header */
+.section-header {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.section-tag {
+  font-size: 0.85rem;
+  color: var(--cinema-yellow);
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: var(--warm-white);
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(21, 21, 21, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(245, 197, 24, 0.2);
+  padding: 14px 0;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav-logo-text {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--cinema-yellow);
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+
+.nav-logo-sub {
+  font-size: 0.65rem;
+  color: var(--warm-white);
+  opacity: 0.8;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--warm-white);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--cinema-yellow);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--cinema-yellow);
+  border-radius: 2px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Sound & exhibition controls */
+.icon-btn {
+  background-color: var(--charcoal-surface);
+  border: 1px solid var(--charcoal-border);
+  color: var(--cinema-yellow);
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.icon-btn:hover {
+  border-color: var(--cinema-yellow);
+  background-color: rgba(245, 197, 24, 0.1);
+}
+
+/* Toast Notifications */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  background-color: var(--charcoal-surface);
+  border-left: 4px solid var(--cinema-yellow);
+  color: var(--warm-white);
+  padding: 14px 20px;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 280px;
+  animation: slideInRight 0.3s var(--ease-cinematic);
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

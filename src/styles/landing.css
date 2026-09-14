@@ -1,0 +1,1500 @@
+/* Cinema Kalalayam™ - Complete Mockup Landing Page Recreation Styles */
+/* Faithfully replicates the uploaded design reference without using a single flat image */
+
+/* ==========================================================================
+   1. TOP NAVBAR (MOCKUP ACCURATE: #151515, Film Reel Logo, Yellow Active Pill)
+   ========================================================================== */
+.mockup-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #151515;
+  border-bottom: 1px solid #262626;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.mockup-nav-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left Brand */
+.nav-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav-film-reel-icon {
+  display: flex;
+  align-items: center;
+}
+
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-line-1 {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--cinema-yellow);
+}
+
+.brand-line-2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--cinema-yellow);
+}
+
+/* Center Menu */
+.nav-center-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  color: #FFF8E7;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  transition: all 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.nav-menu-item:hover {
+  color: var(--cinema-yellow);
+}
+
+/* Active Pill (Matches mockup yellow pill on "Home") */
+.nav-menu-item.active {
+  background-color: var(--cinema-yellow);
+  color: #151515;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(245, 197, 24, 0.4);
+}
+
+/* Right Cluster */
+.nav-right-cluster {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-cta-pill-btn {
+  background-color: var(--cinema-yellow);
+  color: #151515;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(245, 197, 24, 0.35);
+  transition: all 0.2s;
+}
+
+.nav-cta-pill-btn:hover {
+  background-color: #ffd633;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 6px 16px rgba(245, 197, 24, 0.5);
+}
+
+.nav-profile-circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #242424;
+  border: 1.5px solid rgba(245, 197, 24, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-profile-circle-btn:hover {
+  border-color: var(--cinema-yellow);
+  background-color: #333;
+}
+
+.nav-sound-toggle-btn {
+  background: #242424;
+  border: 1px solid #3a3a3a;
+  color: var(--cinema-yellow);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.nav-sound-toggle-btn:hover {
+  border-color: var(--cinema-yellow);
+}
+
+
+/* ==========================================================================
+   2. HERO POSTER STAGE (CINEMA POSTER AESTHETIC #F5C518)
+   ========================================================================== */
+.mockup-hero-stage {
+  position: relative;
+  width: 100%;
+  background: radial-gradient(circle at 50% 30%, #fbd53c 0%, #F5C518 45%, #e0b010 85%, #caa00d 100%);
+  color: #151515;
+  overflow: hidden;
+  padding: 40px 0 0;
+  border-bottom: 2px solid #151515;
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.2);
+}
+
+/* 35mm Film Sprockets */
+.film-perforations-top-strip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 28px;
+  background-image: repeating-linear-gradient(90deg, #151515 0, #151515 14px, transparent 14px, transparent 26px);
+  transform: rotate(-12deg) translate(20px, -10px);
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.film-perforations-bottom-strip {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 260px;
+  height: 32px;
+  background-image: repeating-linear-gradient(90deg, #151515 0, #151515 16px, transparent 16px, transparent 30px);
+  transform: rotate(25deg) translate(40px, 10px);
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* Top-Left Studio Floodlight */
+.studio-floodlight-fixture {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.floodlight-volumetric-beam {
+  position: absolute;
+  top: 70px;
+  left: 80px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.45) 0%, rgba(255, 245, 180, 0.2) 40%, transparent 70%);
+  transform: rotate(35deg);
+  pointer-events: none;
+  filter: blur(15px);
+}
+
+/* Pinned Parchment Note: Left ("Dance, Dialogue, Gesture...") */
+.pinned-parchment-note {
+  position: absolute;
+  z-index: 12;
+  background: #FFF8E7;
+  padding: 16px 20px 14px;
+  border-radius: 3px;
+  box-shadow: 3px 5px 18px rgba(0, 0, 0, 0.25), 0 0 1px rgba(0,0,0,0.5);
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #151515;
+}
+
+.pinned-parchment-note.left-note {
+  top: 85px;
+  left: 140px;
+  transform: rotate(-8deg);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.note-pin {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #8b0000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5), inset 0 2px 4px #ff6b6b;
+}
+
+.note-pin.pin-brass {
+  background: #c5a059;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5), inset 0 2px 4px #ffe699;
+}
+
+.hand-drawn-arrow-svg {
+  position: absolute;
+  bottom: -32px;
+  right: -15px;
+  transform: rotate(-10deg);
+}
+
+/* Center-Top Branding */
+.mockup-hero-branding-center {
+  text-align: center;
+  margin-top: 10px;
+  position: relative;
+  z-index: 8;
+}
+
+.title-cinema-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.title-film-reel-icon {
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(2px 3px 6px rgba(0, 0, 0, 0.2));
+}
+
+.title-cinema-text {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  letter-spacing: 4px;
+  color: #151515;
+  margin: 0;
+  line-height: 0.95;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.2);
+}
+
+.title-kalalayam-row {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  position: relative;
+  margin-top: -10px;
+}
+
+.title-kalalayam-text {
+  font-family: var(--font-display);
+  font-size: 8.5rem;
+  font-weight: 900;
+  color: #D92D20;
+  line-height: 0.9;
+  letter-spacing: 2px;
+  text-shadow: 3px 4px 10px rgba(0, 0, 0, 0.35), 0 0 20px rgba(217, 45, 32, 0.3);
+  transform: scaleY(1.05);
+}
+
+.title-tm {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #151515;
+  vertical-align: super;
+  margin-left: 4px;
+}
+
+/* Crown Doodle Annotation on Right of Title */
+.crown-doodle-box {
+  position: absolute;
+  top: 10px;
+  right: -240px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.crown-annotation-text {
+  font-family: 'Inter', cursive, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #151515;
+  line-height: 1.25;
+  margin-top: 2px;
+}
+
+.crown-arrow-doodle {
+  position: absolute;
+  top: 36px;
+  left: -28px;
+}
+
+/* Tagline Brush */
+.hero-tagline-brush {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #151515;
+  font-style: italic;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Top-Right Kerala Theatre Billboard */
+.theatre-billboard-complex {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.palm-trees-silhouette {
+  opacity: 0.85;
+  margin-bottom: -15px;
+  margin-right: 15px;
+}
+
+.kerala-billboard-frame {
+  background-color: #F5C518;
+  border: 3px solid #151515;
+  padding: 12px 16px;
+  border-radius: 4px;
+  box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.35);
+  transform: rotate(2deg);
+  max-width: 200px;
+  text-align: center;
+}
+
+.billboard-inner-text {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #151515;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+.scene-ready-annotation {
+  font-family: 'Inter', cursive, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #151515;
+  margin-top: 6px;
+  margin-right: 40px;
+  transform: rotate(-6deg);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==========================================================================
+   3. CHARACTERS INTERACTIVE ENSEMBLE & SPEECH BUBBLES
+   ========================================================================== */
+.characters-interactive-ensemble {
+  position: relative;
+  width: 100%;
+  margin: 10px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: visible;
+  padding: 0 10px;
+}
+
+.character-ensemble-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.character-ensemble-img {
+  width: 100%;
+  height: auto;
+  max-height: clamp(480px, 72vh, 800px);
+  object-fit: contain;
+  object-position: bottom center;
+  display: block;
+  user-select: none;
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.45));
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Embedded Real Interactive "START TRAINING" Button Hotspot */
+.embedded-start-btn-hotspot {
+  position: absolute;
+  left: 33.5%;
+  top: 50.5%;
+  width: 33%;
+  height: 34%;
+  cursor: pointer;
+  z-index: 35;
+  border-radius: 50px;
+  background: transparent;
+  border: 3px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.embedded-start-btn-hotspot:hover {
+  border-color: rgba(21, 21, 21, 0.4);
+  box-shadow: 0 0 35px rgba(245, 197, 24, 0.95), inset 0 0 15px rgba(255, 255, 255, 0.3);
+  transform: scale(1.02);
+}
+
+.embedded-start-btn-hotspot:active {
+  transform: scale(0.98);
+}
+
+/* Individual Interactive Character Hitbox Slots */
+.character-slot {
+  position: absolute;
+  cursor: pointer;
+  z-index: 25;
+}
+
+.character-slot.slot-dance {
+  left: 0%;
+  bottom: 0;
+  width: 22%;
+  height: 95%;
+}
+
+.character-slot.slot-gesture {
+  left: 20%;
+  bottom: 0;
+  width: 16%;
+  height: 85%;
+}
+
+.character-slot.slot-center {
+  left: 35%;
+  top: 0%;
+  width: 28%;
+  height: 50%;
+}
+
+.character-slot.slot-student {
+  left: 54%;
+  top: 5%;
+  width: 10%;
+  height: 40%;
+}
+
+.character-slot.slot-mass {
+  left: 57%;
+  bottom: 0;
+  width: 16%;
+  height: 85%;
+}
+
+.character-slot.slot-comedy {
+  right: 0%;
+  bottom: 0;
+  width: 26%;
+  height: 95%;
+}
+
+/* Speech Bubbles as Real HTML Elements */
+.speech-bubble {
+  position: absolute;
+  background: #FFF8E7;
+  color: #151515;
+  border: 2px solid #151515;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 800;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  white-space: nowrap;
+  animation: floatBubble 3s ease-in-out infinite alternate;
+  z-index: 30;
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.bubble-left {
+  top: 2%;
+  left: 3%;
+  transform: rotate(-6deg);
+}
+.bubble-left::after {
+  bottom: -10px;
+  left: 30px;
+  border-width: 10px 10px 0 0;
+  border-color: #FFF8E7 transparent transparent transparent;
+}
+
+.bubble-gesture {
+  top: 10%;
+  left: 22%;
+  transform: rotate(4deg);
+}
+.bubble-gesture::after {
+  bottom: -10px;
+  left: 20px;
+  border-width: 10px 0 0 10px;
+  border-color: #FFF8E7 transparent transparent transparent;
+}
+
+.bubble-student {
+  top: 0%;
+  left: 48%;
+  transform: rotate(-3deg);
+  font-size: 0.8rem;
+}
+.bubble-student::after {
+  bottom: -8px;
+  left: 25px;
+  border-width: 8px 8px 0 0;
+  border-color: #FFF8E7 transparent transparent transparent;
+}
+
+.bubble-right {
+  top: 2%;
+  right: 4%;
+  transform: rotate(6deg);
+}
+.bubble-right::after {
+  bottom: -10px;
+  left: 25px;
+  border-width: 10px 10px 0 0;
+  border-color: #FFF8E7 transparent transparent transparent;
+}
+
+@keyframes floatBubble {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-6px); }
+}
+
+/* ==========================================================================
+   5. BOTTOM DARK FEATURE STRIP (5 ITEMS FROM MOCKUP)
+   ========================================================================== */
+.hero-bottom-feature-strip {
+  background-color: rgba(18, 18, 18, 0.96);
+  border-top: 2px solid #282828;
+  margin-top: 0;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 16px;
+  position: relative;
+  z-index: 20;
+}
+
+.feature-strip-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFF8E7;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.feature-strip-item:hover {
+  background: rgba(245, 197, 24, 0.12);
+  color: var(--cinema-yellow);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  font-size: 1.3rem;
+  filter: drop-shadow(0 2px 6px rgba(245, 197, 24, 0.4));
+}
+
+.feature-label {
+  letter-spacing: 0.3px;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE MEDIA QUERIES FOR HERO POSTER
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .title-cinema-text { font-size: 4rem; }
+  .title-kalalayam-text { font-size: 6.5rem; }
+  .crown-doodle-box { right: -160px; }
+  .pinned-parchment-note.left-note { left: 40px; top: 60px; font-size: 0.85rem; }
+  .theatre-billboard-complex { right: 20px; top: 20px; }
+  .speech-bubble { font-size: 0.82rem; padding: 6px 12px; }
+}
+
+@media (max-width: 768px) {
+  .nav-center-menu { display: none; }
+  .title-cinema-text { font-size: 2.8rem; }
+  .title-kalalayam-text { font-size: 4.8rem; }
+  .crown-doodle-box { display: none; }
+  .pinned-parchment-note.left-note { display: none; }
+  .theatre-billboard-complex { display: none; }
+  .hero-bottom-feature-strip { justify-content: center; }
+  .speech-bubble { font-size: 0.75rem; padding: 4px 10px; }
+}
+
+/* ==========================================================================
+   7. CURRICULUM SECTION & POSTER-GRADE COURSE CARDS
+   ========================================================================== */
+.courses-section {
+  padding: 100px 0 110px;
+  background-color: var(--charcoal-black);
+  position: relative;
+  border-bottom: 2px solid #222;
+}
+
+/* Section Header Typography Hierarchy */
+.curriculum-header {
+  margin-bottom: 56px;
+  text-align: center;
+  position: relative;
+}
+
+.curriculum-billboard-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-condensed);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  color: var(--soft-yellow);
+  margin-bottom: 12px;
+  padding: 4px 16px;
+  background: rgba(245, 197, 24, 0.08);
+  border: 1px solid rgba(245, 197, 24, 0.25);
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.curriculum-reel-icon {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* CURRICULUM OF CELLULOID -> Very large, bold cinematic display font */
+.curriculum-main-title {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--cinema-yellow);
+  line-height: 1.05;
+  max-width: 960px;
+  margin: 0 auto 10px;
+  text-transform: uppercase;
+  text-shadow: 0 0 25px rgba(245, 197, 24, 0.4), 0 3px 6px rgba(0,0,0,0.9);
+}
+
+/* THE SCIENCE OF LOOKING CINEMATIC FOR NO REASON -> Bold/semibold, slightly smaller */
+.curriculum-sub-title {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--warm-white);
+  line-height: 1.25;
+  max-width: 920px;
+  margin: 0 auto 16px;
+  text-transform: uppercase;
+}
+
+.curriculum-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: #B5B0A4;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Course Grid */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Individual Movie Poster Course Card */
+.course-card {
+  background-color: #1a1a1a;
+  border: 2px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s var(--ease-cinematic);
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.course-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cinema-yellow) 0%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.course-card:hover {
+  border-color: var(--cinema-yellow);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8), 0 0 20px rgba(245, 197, 24, 0.2);
+}
+
+.course-card:hover::before {
+  opacity: 1;
+}
+
+.course-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Header Row: COURSE 01 + Icon + Difficulty */
+.course-card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed #333;
+}
+
+.course-num-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-condensed);
+}
+
+.course-num-badge {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--cinema-yellow);
+  letter-spacing: 1.5px;
+  background: rgba(245, 197, 24, 0.12);
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1px solid rgba(245, 197, 24, 0.3);
+}
+
+.course-code-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #777;
+  letter-spacing: 1px;
+}
+
+.course-badge-cluster {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.course-icon-badge {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+/* Course Title -> Large bold condensed display font (Movie Poster Typography) */
+.course-poster-title {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--warm-white);
+  line-height: 1;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.course-card:hover .course-poster-title {
+  color: var(--cinema-yellow);
+}
+
+/* Malayalam Title -> Malayalam Unicode font with proper line-height & weight */
+.course-malayalam-title {
+  font-family: var(--font-malayalam);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #FFE58A;
+  line-height: 1.45;
+  margin-bottom: 14px;
+  letter-spacing: 0.3px;
+}
+
+/* Subtitle Quote Tagline */
+.course-quote-tagline {
+  font-family: var(--font-condensed);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cinema-yellow);
+  line-height: 1.4;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  font-style: italic;
+}
+
+/* Description -> Clean modern sans-serif */
+.course-editorial-desc {
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  color: #BFBAB0;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+/* Mentor Information Box */
+.course-mentor-panel {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid #2e2e2e;
+  border-left: 3px solid var(--cinema-yellow);
+  padding: 12px 14px;
+  border-radius: 4px;
+  margin-top: auto;
+  margin-bottom: 20px;
+  transition: border-color 0.2s;
+}
+
+.course-card:hover .course-mentor-panel {
+  border-color: #444;
+  border-left-color: var(--cinema-yellow);
+}
+
+.mentor-meta-label {
+  font-family: var(--font-condensed);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--cinema-yellow);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.mentor-display-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--warm-white);
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.mentor-quote-line {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: #AAA;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+/* Footer: Duration + CTA Button */
+.course-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #282828;
+}
+
+.course-duration-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.duration-label {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #777;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.duration-val {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--warm-white);
+  margin-top: 3px;
+}
+
+.course-card-footer .start-course-btn,
+.course-card-footer .start-btn-trigger {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  padding: 8px 18px;
+}
+
+/* Responsive Grid Adjustments for Curriculum */
+@media (max-width: 1080px) {
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .curriculum-main-title {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .curriculum-billboard-tag {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+  }
+  .curriculum-main-title {
+    font-size: 2rem;
+  }
+  .course-poster-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* ==========================================================================
+   8. HOMEPAGE 3D PERSPECTIVE COVERFLOW CAROUSEL ANIMATION
+   ========================================================================== */
+.coverflow-3d-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.coverflow-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.coverflow-reel-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-condensed);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--cinema-yellow);
+  letter-spacing: 1.5px;
+  background: rgba(18, 18, 18, 0.85);
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid rgba(245, 197, 24, 0.35);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.coverflow-drag-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.scroll-icon-mini {
+  animation: pulseScroll 2s infinite ease-in-out;
+}
+
+@keyframes pulseScroll {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+/* 3D Perspective Stage */
+.coverflow-stage {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  margin: 10px auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  touch-action: pan-y;
+  overflow: visible;
+  user-select: none;
+  contain: layout;
+}
+
+.coverflow-boxes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+/* Individual 3D Perspective Card */
+.coverflow-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 440px;
+  max-width: 86vw;
+  height: 490px;
+  background: linear-gradient(150deg, #1e1e1e 0%, #141414 100%);
+  border: 2px solid #333;
+  border-radius: 14px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform, opacity;
+  cursor: pointer;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.75);
+  -webkit-box-reflect: below 8px linear-gradient(transparent 65%, rgba(245, 197, 24, 0.16) 100%);
+  transition: border-color 0.2s ease;
+}
+
+.coverflow-box.is-active {
+  border-color: var(--cinema-yellow);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.9), 0 0 25px rgba(245, 197, 24, 0.35);
+}
+
+.coverflow-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cinema-yellow) 0%, transparent 80%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.coverflow-box.is-active::before {
+  opacity: 1;
+}
+
+/* Top 35mm Sprocket Strip */
+.coverflow-sprocket-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f0f0f;
+  padding: 8px 18px;
+  border-bottom: 2px solid #252525;
+  font-family: var(--font-condensed);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #777;
+  letter-spacing: 2px;
+}
+
+.sprocket-perforations {
+  display: flex;
+  gap: 6px;
+}
+
+.sprocket-hole {
+  width: 10px;
+  height: 7px;
+  background: #252525;
+  border-radius: 2px;
+}
+
+.sprocket-frame-label {
+  color: var(--cinema-yellow);
+  font-weight: 800;
+}
+
+/* Card Interior Body */
+.coverflow-card-body {
+  padding: 22px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 37px);
+}
+
+.coverflow-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.coverflow-title-group {
+  margin-bottom: 10px;
+}
+
+.coverflow-title {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--warm-white);
+  line-height: 1;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.coverflow-box:hover .coverflow-title,
+.coverflow-box.is-active .coverflow-title {
+  color: var(--cinema-yellow);
+}
+
+.coverflow-malayalam {
+  font-family: var(--font-malayalam);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #FFE58A;
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
+.coverflow-tagline {
+  font-family: var(--font-condensed);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cinema-yellow);
+  font-style: italic;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.coverflow-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: #BFBAB0;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Faculty Info Box */
+.coverflow-mentor-panel {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid #2a2a2a;
+  border-left: 3px solid var(--cinema-yellow);
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.coverflow-mentor-label {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--cinema-yellow);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.coverflow-mentor-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--warm-white);
+  letter-spacing: 1px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.coverflow-mentor-quote {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: #AAA;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+/* Footer Row */
+.coverflow-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #282828;
+}
+
+.coverflow-duration-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.coverflow-duration-label {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #777;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.coverflow-duration-val {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--warm-white);
+  margin-top: 2px;
+}
+
+.coverflow-cta-btn {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  padding: 8px 18px;
+  text-transform: uppercase;
+}
+
+/* Round 3D Controls Matching User's Snippet */
+.coverflow-controls {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  z-index: 200;
+}
+
+.coverflow-nav-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  position: absolute;
+  top: -27px;
+  outline: transparent;
+  cursor: pointer;
+  background: rgba(18, 18, 18, 0.95);
+  border: 2px solid var(--cinema-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  transition: all 0.25s var(--ease-cinematic);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9), 0 0 20px rgba(245, 197, 24, 0.4);
+}
+
+.coverflow-nav-btn span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.coverflow-nav-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--cinema-yellow);
+  transition: fill 0.2s, transform 0.2s;
+}
+
+.coverflow-nav-btn.prev-btn {
+  left: max(16px, calc(50% - 470px));
+}
+
+.coverflow-nav-btn.next-btn {
+  right: max(16px, calc(50% - 470px));
+}
+
+.coverflow-nav-btn:hover {
+  background: var(--cinema-yellow);
+  transform: scale(1.15);
+  box-shadow: 0 0 35px rgba(245, 197, 24, 0.6);
+}
+
+.coverflow-nav-btn:hover svg {
+  fill: #151515;
+}
+
+.coverflow-nav-btn:active {
+  transform: scale(0.95);
+}
+
+.coverflow-nav-btn:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+  border-color: #444;
+  background: #181818;
+  box-shadow: none;
+  transform: none;
+}
+
+.coverflow-nav-btn:disabled svg {
+  fill: #555;
+}
+
+/* Bottom Timeline & Frame Selector */
+.carousel-bottom-dock {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.carousel-timeline-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.timeline-chip {
+  background: #1c1c1c;
+  border: 1px solid #333;
+  color: #999;
+  font-family: var(--font-condensed);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 7px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-cinematic);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.timeline-chip:hover {
+  border-color: var(--cinema-yellow);
+  color: var(--cinema-yellow);
+  transform: translateY(-2px);
+}
+
+.timeline-chip.active {
+  background: var(--cinema-yellow);
+  color: #151515;
+  border-color: var(--cinema-yellow);
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(245, 197, 24, 0.35);
+  transform: scale(1.05);
+}
+
+.carousel-progress-track {
+  width: 280px;
+  height: 4px;
+  background: #252525;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-progress-fill {
+  height: 100%;
+  width: 16.6%;
+  background: linear-gradient(90deg, var(--cinema-yellow), #FFE58A);
+  transition: width 0.35s ease;
+  border-radius: 2px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 960px) {
+  .coverflow-stage {
+    height: 520px;
+  }
+  .coverflow-box {
+    width: 380px;
+    height: 470px;
+  }
+  .coverflow-title {
+    font-size: 2.2rem;
+  }
+  .coverflow-nav-btn.prev-btn {
+    left: 8px;
+  }
+  .coverflow-nav-btn.next-btn {
+    right: 8px;
+  }
+}
+
+@media (max-width: 680px) {
+  .coverflow-stage {
+    height: 480px;
+  }
+  .coverflow-box {
+    width: 310px;
+    height: 450px;
+  }
+  .coverflow-title {
+    font-size: 1.9rem;
+  }
+  .coverflow-card-body {
+    padding: 16px;
+  }
+  .coverflow-desc {
+    display: none;
+  }
+}

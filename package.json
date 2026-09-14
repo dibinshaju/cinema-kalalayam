@@ -1,0 +1,21 @@
+{
+  "name": "cinema-kalalayam",
+  "version": "1.0.0",
+  "description": "Cinema Kalalayam™ — Playful AI-powered cinematic skill training platform: 'Skill padikkam. Cinema aakkam.'",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/smokeTest.js"
+  },
+  "keywords": [
+    "cinema-kalalayam",
+    "malayalam-cinema",
+    "cinematic-training",
+    "web-audio",
+    "computer-vision",
+    "creative-ai"
+  ],
+  "author": "Cinema Kalalayam Team",
+  "license": "MIT"
+}
